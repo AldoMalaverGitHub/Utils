@@ -1,0 +1,11 @@
+#Add the repository to download the jdk 8 
+sudo add-apt-repository ppa:webupd8team/java
+
+#Update the repository
+sudo apt-get update
+
+#Install jdk 8
+sudo apt-get install oracle-java8-installer
+
+You must accept the Oracle terms and conditions
+
