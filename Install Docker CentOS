@@ -1,0 +1,18 @@
+# Update repositories files
+sudo yum check-update
+
+#Install Docker
+curl -fsSL https://get.docker.com/ | sh
+
+#Start docker
+sudo systemctl start docker
+
+#See if docker is running
+sudo systemctl status docker
+
+#Set docker to start at every server reboot
+sudo systemctl enable docker
+
+#Configure Docker to do not ask sudo command
+sudo usermod -aG docker $(whoami)
+sudo usermod -aG docker <username>
