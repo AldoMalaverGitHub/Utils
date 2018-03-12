@@ -1,0 +1,7 @@
+# Install Skype for Centos
+
+# Download the skype for Centos Linux
+wget https://go.skype.com/skypeforlinux-64.rpm
+
+# Install Skype for Centos Linux
+yum localinstall skypeforlinux-64.rpm  
