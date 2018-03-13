@@ -1,0 +1,5 @@
+# Install mongodb server with docker
+docker run --name mongodbpoc -d mongo
+
+# Install mysql server with docker
+docker run --name mysqlpoc -e MYSQL_ROOT_PASSWORD=mysql -d mysql:latest
