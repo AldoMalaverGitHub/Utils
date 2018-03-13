@@ -1,0 +1,4 @@
+sudo yum install epel-release
+sudo yum install proj
+sudo yum install tinyxml
+sudo yum install libzip
