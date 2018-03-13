@@ -1,0 +1,8 @@
+# mount ntfs disk
+yum -y install ntfs-3g
+yum install fuse
+modprobe fuse
+fdisk -l
+mkdir /mnt/nts
+mount -t ntfs-3g /dev/sda3 /mnt/nts
+
