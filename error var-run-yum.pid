@@ -1,0 +1,3 @@
+# Existing lock /var/run/yum.pid: another copy is running as pid
+sudo rm -rf /var/run/yum.pid
+yum clean all
