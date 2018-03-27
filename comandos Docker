@@ -22,3 +22,12 @@ docker run --name <new_container_name> -v <current_local_path>:<path_inside_of_c
 #Create a new container using a container as volumne
 docker run --name <new_container_volume_name> -v <path_inside_of_container> <image_name>:<tag> 
 docker run --name <new_container_name> --volumes-from <new_container_volume_name>  -it <image_name>:<tag> <command>
+
+#Enter to container if you exit with ctrl+p+q combination keys
+docker attach <container_name>
+
+#Enter to container that is still running
+docker exec -it <container_name> /bin/bash
+
+#Save information from container volume (--rm to eliminate to container after finish the zip task)
+docker run --rm --volumes-from <container_name> -v $(pwd):/backup <image_name>:<tag> tar cvf <path_and_tar_file_name> <backup_container_folder>
