@@ -1,0 +1,24 @@
+#Generate image from container
+docker commit <container> <image_name>
+
+#Generate image from Dockerfile with path
+docker build -t <image_name> <DockerFile_path>
+
+#Generate image from Dockerfile when the Dockerfile is stored in your current folder
+docker image build -t <image_name> .
+
+#Create local image
+docker image save --output <image_name_to_generate> <current_image_name>
+
+#Upload an image in a folder
+docker image load --input <file_name>
+
+#run a container with name
+docker run --name <new_container_name> -it -d <image_name>:<tag> <command>
+
+#Create a new container using a volume
+docker run --name <new_container_name> -v <current_local_path>:<path_inside_of_container> -it -d <image_name>:<tag> <command>
+
+#Create a new container using a container as volumne
+docker run --name <new_container_volume_name> -v <path_inside_of_container> <image_name>:<tag> 
+docker run --name <new_container_name> --volumes-from <new_container_volume_name>  -it <image_name>:<tag> <command>
