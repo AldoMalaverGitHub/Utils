@@ -31,3 +31,15 @@ docker exec -it <container_name> /bin/bash
 
 #Save information from container volume (--rm to eliminate to container after finish the zip task)
 docker run --rm --volumes-from <container_name> -v $(pwd):/backup <image_name>:<tag> tar cvf <path_and_tar_file_name> <backup_container_folder>
+
+#Run a container exposing all the ports created in the image with random number of ports
+docker container run --rm -d --publish-all <image_name>:<tag>
+
+#Inspect an image
+docker image inspect <image_name>:<tag> | more
+
+#show container logs
+docker container logs -f <container_name>
+
+#Run a container exposing ports
+docker container run --rm -p <current_port>:<container_port> <image_name>:<tag>
